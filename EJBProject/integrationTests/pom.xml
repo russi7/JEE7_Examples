@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.dummy</groupId>
+    <artifactId>EJBProject</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>integrationTests</artifactId>
+  <name>EJB Project: Integration Tests</name>
+  
+  <dependencies>
+  	<!-- Internal dependencies -->
+  	<dependency>
+  		<groupId>net.dummy</groupId>
+  		<artifactId>restFulServices</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>net.dummy</groupId>
+  		<artifactId>dto</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>net.dummy</groupId>
+  		<artifactId>managers</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>net.dummy</groupId>
+  		<artifactId>apiImpl</artifactId>
+  		<version>${project.version}</version>
+  		<classifier>classes</classifier>
+  	</dependency>
+  	
+  	
+  	
+  	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+	</dependency>
+<!-- 	<dependency> -->
+<!-- 		<groupId>org.jboss.arquillian</groupId> -->
+<!-- 		<artifactId>arquillian-bom</artifactId> -->
+<!-- 	</dependency> -->
+	<dependency>
+		<groupId>org.jboss.weld</groupId>
+		<artifactId>weld-core</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.weld.arquillian.container</groupId>
+		<artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.arquillian.junit</groupId>
+		<artifactId>arquillian-junit-container</artifactId>
+	</dependency>
+  	
+  </dependencies>
+  
+</project>

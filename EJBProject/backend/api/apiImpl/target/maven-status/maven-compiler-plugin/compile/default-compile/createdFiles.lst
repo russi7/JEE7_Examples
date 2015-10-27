@@ -1,0 +1,5 @@
+net\dummy\backend\api\ejb\AbstractEjbManager.class
+net\dummy\backend\api\jaxrs\JaxRsActivation.class
+net\dummy\backend\api\jaxrs\dummy\DummyJaxRsService.class
+net\dummy\backend\api\jaxrs\AbstractJaxRsService.class
+net\dummy\backend\api\ejb\dummy\DummyEjbManager.class

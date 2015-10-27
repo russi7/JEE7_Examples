@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.dummy</groupId>
+  <artifactId>EJBProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>EJB Project</name>
+  
+  <packaging>pom</packaging>
+  
+	<modules>
+	  	<module>backend</module>
+	  	<module>frontend</module>
+	  	<module>shared</module>
+<!-- 	  	<module>integrationTests</module> -->
+	</modules>
+	
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>org.jboss.resteasy</id> -->
+<!-- 			<url>http://repository.jboss.org/maven2/</url> -->
+<!-- 			<url>http://repository.jboss.org/nexus/content/groups/public</url> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
+	
+	
+	<dependencyManagement>
+	  	<dependencies>
+	  	
+	  		<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.9.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-client</artifactId>
+				<version>3.0.11.Final</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.arquillian</groupId>
+				<artifactId>arquillian-bom</artifactId>
+				<version>1.1.9.Final</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld</groupId>
+				<artifactId>weld-core</artifactId>
+				<version>2.3.0.CR2</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld.arquillian.container</groupId>
+				<artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
+				<version>1.1.2.Final</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.arquillian.junit</groupId>
+				<artifactId>arquillian-junit-container</artifactId>
+				<version>1.1.9.Final</version>
+				<scope>test</scope>
+			</dependency>
+			
+			
+			
+	  	</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+<!-- 			<plugin> -->
+<!-- 			    <artifactId>maven-surefire-plugin</artifactId> -->
+<!-- 			    <version>2.17</version> -->
+<!-- 			</plugin> -->
+	    </plugins>
+	</build>
+	
+</project>

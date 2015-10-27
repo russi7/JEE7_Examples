@@ -1,0 +1,2 @@
+INSERT INTO DUMMY(ID, VERSION, NAME, DESCRIPTION) VALUES(hibernate_sequence.nextVal, 1, 'Name 1', 'Description 1');
+INSERT INTO DUMMY(ID, VERSION, NAME, DESCRIPTION) VALUES(hibernate_sequence.nextVal, 1, 'Name 2', 'Description 2');
