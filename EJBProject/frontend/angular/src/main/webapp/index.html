@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>AngularJS</title>
+		<meta charset="UTF-8">
+<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script> -->
+		<script src="js/angular.min.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		
+		<!-- UI Grid -->
+		<script src="js/lib/uigrid/ui-grid.min.js"></script>
+		<link rel="styleSheet" href="js/lib/uigrid/ui-grid.min.css"/>
+		
+		<style type="text/css">
+			.myGrid {
+				width: 500px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div ng-controller="testController">
+			<div ui-grid="{ data: gridData }" class="myGrid"></div>
+			
+			Id <input ng-model="dummy.id">
+			<button ng-click="changeMessage()">Submit</button>
+			<br>
+			<h1>Name: {{dummy.name}}</h1>
+			
+		</div>
+		
+	</body>
+</html>

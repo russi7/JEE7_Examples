@@ -20,7 +20,7 @@ import com.vaadin.ui.VerticalLayout;
 
 
 @Theme("valo")
-@CDIUI("")
+@CDIUI("TestVaadin")
 public class TestVaadin extends UI {
 	
 	private static final long serialVersionUID = 8329653938548335836L;
