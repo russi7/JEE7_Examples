@@ -1,4 +1,0 @@
-net\dummy\backend\dao\dummy\DummyRepository.class
-net\dummy\backend\dao\jpa\dummy\DummyJpaRepository.class
-net\dummy\backend\dao\Repository.class
-net\dummy\backend\dao\jpa\AbstractJpaRepository.class
