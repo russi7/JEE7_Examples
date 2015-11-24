@@ -22,11 +22,11 @@
   		<artifactId>restFulClient</artifactId>
   		<version>${project.version}</version>
   	</dependency>
-  	<dependency>
-  		<groupId>net.dummy</groupId>
-  		<artifactId>managers</artifactId>
-  		<version>${project.version}</version>
-  	</dependency>
+<!--   	<dependency> -->
+<!--   		<groupId>net.dummy</groupId> -->
+<!--   		<artifactId>managers</artifactId> -->
+<!--   		<version>${project.version}</version> -->
+<!--   	</dependency> -->
   	
   	
   	

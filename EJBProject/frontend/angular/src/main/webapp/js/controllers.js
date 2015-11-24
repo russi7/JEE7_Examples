@@ -1,10 +1,19 @@
 var app=angular.module("app",['ui.grid']);
 
-app.constant("helloWorld","Hello World!");
+//app.constant("helloWorld","Hello World!");
 
-app.controller("testController", ['$scope', '$log', '$http', function($scope, $log, $http) {
-	$scope.message = "Hello World!";
+app.service("helloWorld", function() {
+	this.getMessage = function() {
+		return "Hello World!";
+	}
+});
+
+app.controller("testController", ['$scope', '$log', '$http', 'helloWorld', function($scope, $log, $http, helloWorld) {
+	//$scope.message = "Hello World!";
+	//$scope.message = helloWorld;
+	$scope.message = helloWorld.getMessage();
 	
+	$scope.selectedDummy = null;
 	
 	$http({
 		method: "GET", 
@@ -15,7 +24,7 @@ app.controller("testController", ['$scope', '$log', '$http', function($scope, $l
 		$scope.message = "ERROR " + status;
 	});
 	
-	$scope.changeMessage=function() {	
+	$scope.changeMessage=function() {
 		
 		$http({
 			method: "GET", 

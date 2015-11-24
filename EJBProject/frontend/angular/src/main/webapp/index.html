@@ -2,9 +2,8 @@
 <html ng-app="app">
 	<head>
 		<title>AngularJS</title>
-		<meta charset="UTF-8">
-<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script> -->
-		<script src="js/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<!-- 		<script src="js/lib/angular/angular.min.js"></script> -->
 		<script src="js/services.js"></script>
 		<script src="js/controllers.js"></script>
 		
@@ -22,12 +21,35 @@
 	<body>
 		
 		<div ng-controller="testController">
+			<h1 ng-bind="message"></h1>
 			<div ui-grid="{ data: gridData }" class="myGrid"></div>
 			
-			Id <input ng-model="dummy.id">
+			<input type="text" ng-model="dummy.id" placeholder="Enter a dummy Id">
 			<button ng-click="changeMessage()">Submit</button>
 			<br>
 			<h1>Name: {{dummy.name}}</h1>
+			
+			<div>
+				Select a object: 
+				<select ng-model="selectedDummy" ng-options="dummyObject as dummyObject.name for dummyObject in gridData track by dummyObject.id"></select>
+			</div>
+			
+			
+			<table>
+				<tr>
+					<td>Id</td>
+					<td>Version</td>
+					<td>Name</td>
+					<td>Description</td>
+				</tr>
+				<tr ng-repeat="dummyObject in gridData">
+					<td ng-bind="dummyObject.id"></td>
+					<td ng-bind="dummyObject.version"></td>
+					<td ng-bind="dummyObject.name"></td>
+					<td ng-bind="dummyObject.description"></td>
+				</tr>
+			</table>
+			
 			
 		</div>
 		

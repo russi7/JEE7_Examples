@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: net.dummy.tests.AbstractIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.48 sec <<< FAILURE!
-net.dummy.tests.AbstractIntegrationTest  Time elapsed: 0.479 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.426 sec <<< FAILURE!
+net.dummy.tests.AbstractIntegrationTest  Time elapsed: 0.426 sec  <<< ERROR!
 org.jboss.arquillian.container.test.impl.client.deployment.ValidationException: DeploymentScenario contains a target (_DEFAULT_) not matching any defined Container in the registry.
 Please include at least 1 Deployable Container on your Classpath.
 	at org.jboss.arquillian.container.test.impl.client.deployment.DeploymentGenerator.throwNoContainerFound(DeploymentGenerator.java:250)
