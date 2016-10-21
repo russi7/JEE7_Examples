@@ -2,6 +2,7 @@ package net.dummy.backend.api.jaxrs.dummy;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 
@@ -10,6 +11,7 @@ import net.dummy.backend.api.rest.dummy.DummyRestService;
 import net.dummy.backend.managers.dummy.DummyManager;
 import net.dummy.dto.dummy.DummyDto;
 
+@Stateless
 public class DummyJaxRsService extends AbstractJaxRsService<DummyDto> implements DummyRestService {
 	
 	@Inject
